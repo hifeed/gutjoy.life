@@ -12,7 +12,7 @@ export default function ClubButton({ className = "" }: ClubButtonProps) {
       rel="noopener noreferrer"
       className={`bg-hifeed text-on-hifeed hover:bg-hifeed-hover font-[family-name:var(--font-label-md)] font-bold tracking-wider uppercase rounded-lg transition-all inline-flex items-center justify-center ${className}`}
     >
-      CLICK
+      ORDER
     </a>
   );
 }
