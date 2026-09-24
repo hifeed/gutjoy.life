@@ -48,6 +48,11 @@
   --color-background: #f8f9ff;
   --color-on-background: #0d1c2e;
 
+  /* HiFeed Club CTA (https://club.hifeed.co/) */
+  --color-hifeed: #f26522;
+  --color-hifeed-hover: #d4541a;
+  --color-on-hifeed: #ffffff;
+
   --font-headline-lg-mobile: var(--font-fredoka), "Fredoka", sans-serif;
   --font-headline-lg: var(--font-fredoka), "Fredoka", sans-serif;
   --font-headline-md: var(--font-fredoka), "Fredoka", sans-serif;
