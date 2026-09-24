@@ -2,7 +2,7 @@
 
 import { useLang } from "@/contexts/LangContext";
 import ClubButton from "@/components/ClubButton";
-import { CLUB_URL } from "@/lib/club";
+import { CLUB_URL, SHOW_PARTNERSHIP } from "@/lib/club";
 
 export default function Footer() {
   const { t } = useLang();
@@ -53,12 +53,14 @@ export default function Footer() {
         >
           {t.footer.aboutLink}
         </a>
-        <a
-          className="font-[family-name:var(--font-body-md)] text-base text-on-surface-variant hover:text-primary transition-colors underline-offset-4 hover:underline"
-          href="#partnership"
-        >
-          {t.footer.partnershipLink}
-        </a>
+        {SHOW_PARTNERSHIP && (
+          <a
+            className="font-[family-name:var(--font-body-md)] text-base text-on-surface-variant hover:text-primary transition-colors underline-offset-4 hover:underline"
+            href="#partnership"
+          >
+            {t.footer.partnershipLink}
+          </a>
+        )}
         <ClubButton className="text-sm px-4 py-2 w-fit" />
         <a
           href={CLUB_URL}
