@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import { useLang } from "@/contexts/LangContext";
-import { useOrderForm } from "@/contexts/OrderFormContext";
+import ClubButton from "@/components/ClubButton";
+import { CLUB_URL } from "@/lib/club";
 
 export default function Partnership() {
   const { t } = useLang();
-  const { openOrderForm } = useOrderForm();
 
   return (
     <section
@@ -83,16 +83,22 @@ export default function Partnership() {
                   ))}
                 </ul>
 
-                <button
-                  onClick={() => openOrderForm(tier.whatsappText)}
-                  className={`w-full py-3 rounded-lg font-[family-name:var(--font-label-md)] text-sm transition-colors mt-auto text-center ${
-                    isPopular
-                      ? "bg-secondary text-on-secondary hover:bg-on-secondary-fixed-variant shadow-md"
-                      : "border-2 border-primary text-primary hover:bg-primary/5"
-                  }`}
-                >
-                  {tier.buttonText}
-                </button>
+                {tier.isContact ? (
+                  <ClubButton className="w-full py-3 text-sm mt-auto shadow-md" />
+                ) : (
+                  <a
+                    href={CLUB_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-full py-3 rounded-lg font-[family-name:var(--font-label-md)] text-sm transition-colors mt-auto text-center ${
+                      isPopular
+                        ? "bg-secondary text-on-secondary hover:bg-on-secondary-fixed-variant shadow-md"
+                        : "border-2 border-primary text-primary hover:bg-primary/5"
+                    }`}
+                  >
+                    {tier.buttonText}
+                  </a>
+                )}
               </div>
             );
           })}

@@ -64,7 +64,7 @@ type Translations = {
       price: string;
       features: string[];
       buttonText: string;
-      whatsappText: string;
+      isContact?: boolean;
       popular: string;
     }[];
   };
@@ -79,7 +79,6 @@ type Translations = {
     linksTitle: string;
     aboutLink: string;
     partnershipLink: string;
-    contactLink: string;
     faqLink: string;
     addressTitle: string;
     address: {
@@ -174,8 +173,6 @@ const translations: Record<Lang, Translations> = {
           price: "Mulai 1Jt",
           features: ["Modal terjangkau", "Materi promosi digital"],
           buttonText: "Pilih Paket",
-          whatsappText:
-            "Halo GutJoy! Saya tertarik menjadi Reseller. Mohon info paket dan syaratnya.",
           popular: "Populer",
         },
         {
@@ -188,8 +185,6 @@ const translations: Record<Lang, Translations> = {
             "Brosur & Spanduk",
           ],
           buttonText: "Daftar Agen",
-          whatsappText:
-            "Halo GutJoy! Saya tertarik menjadi Agen. Mohon info paket dan syaratnya.",
           popular: "Populer",
         },
         {
@@ -202,8 +197,6 @@ const translations: Record<Lang, Translations> = {
             "Support marketing full",
           ],
           buttonText: "Konsultasi",
-          whatsappText:
-            "Halo GutJoy! Saya tertarik menjadi Distributor. Mohon info paket dan syaratnya.",
           popular: "Populer",
         },
         {
@@ -212,8 +205,7 @@ const translations: Record<Lang, Translations> = {
           price: "Custom",
           features: ["Kemasan bulk/grosir", "Suplai rutin terjamin"],
           buttonText: "Hubungi Tim",
-          whatsappText:
-            "Halo GutJoy! Saya tertarik untuk kemitraan B2B/Horeca. Mohon info dan penawaran.",
+          isContact: true,
           popular: "Populer",
         },
       ],
@@ -230,7 +222,6 @@ const translations: Record<Lang, Translations> = {
       linksTitle: "Tautan Pantas",
       aboutLink: "Tentang Kami",
       partnershipLink: "Kemitraan",
-      contactLink: "Hubungi Kami",
       faqLink: "FAQ",
       addressTitle: "Alamat",
       address: {
@@ -323,8 +314,6 @@ const translations: Record<Lang, Translations> = {
           price: "From 1M",
           features: ["Affordable capital", "Digital promotion materials"],
           buttonText: "Choose Package",
-          whatsappText:
-            "Hello GutJoy! I'm interested in becoming a Reseller. Please provide package and requirement info.",
           popular: "Popular",
         },
         {
@@ -337,8 +326,6 @@ const translations: Record<Lang, Translations> = {
             "Brochures & Banners",
           ],
           buttonText: "Register as Agent",
-          whatsappText:
-            "Hello GutJoy! I'm interested in becoming an Agent. Please provide package and requirement info.",
           popular: "Popular",
         },
         {
@@ -351,8 +338,6 @@ const translations: Record<Lang, Translations> = {
             "Full marketing support",
           ],
           buttonText: "Consult Now",
-          whatsappText:
-            "Hello GutJoy! I'm interested in becoming a Distributor. Please provide package and requirement info.",
           popular: "Popular",
         },
         {
@@ -361,8 +346,7 @@ const translations: Record<Lang, Translations> = {
           price: "Custom",
           features: ["Bulk/wholesale packaging", "Guaranteed routine supply"],
           buttonText: "Contact Team",
-          whatsappText:
-            "Hello GutJoy! I'm interested in B2B/Horeca partnership. Please provide info and quotation.",
+          isContact: true,
           popular: "Popular",
         },
       ],
@@ -379,7 +363,6 @@ const translations: Record<Lang, Translations> = {
       linksTitle: "Quick Links",
       aboutLink: "About Us",
       partnershipLink: "Partnership",
-      contactLink: "Contact Us",
       faqLink: "FAQ",
       addressTitle: "Address",
       address: {
